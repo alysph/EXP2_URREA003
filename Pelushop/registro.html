@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+ <!-- LIBRERIA BOOSTRAP -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+ <link rel="icon" href="img/logo_1.ico">
+<link rel="stylesheet" href="css/style.css" />
+<script
+src="https://kit.fontawesome.com/64d58efce2.js"
+crossorigin="anonymous"
+></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+
+<script>
+  function Mover(obj)
+{
+obj.innerHTML="Te esperamos...";
+obj.style.background="#7e7e7e";
+
+}
+
+function MoverFuera(obj)
+{
+obj.innerHTML="¡Es completamente gratis el registro!";
+obj.style.background= "##7e7e7e";
+
+}
+
+function CambiaColor(a)
+{
+  a.style.background = "red";
+}
+
+function CambiarMayusculas()
+{
+  var a = document.getElementById('nom');
+  a.value = a.value.toUpperCase();
+  }
+
+  function MostrarFecha() 
+        {   document.getElementById('demo').innerHTML = Date();
+         
+        }
+</script>
+
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <div class="container-fluid">
+   <a class="navbar-brand" href="index.html">PELUSHOP</a>
+   <img src="img/logo.png" alt="logo" width="200px">
+   </a>
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav">
+       <li class="nav-item">
+         <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="quienessomos.html">¿Quiénes somos?</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="galeria.html">Galería</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="contacto.html">Contacto</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="registro.html">Registro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="api.html">API</a>
+      </li>
+     </ul>
+   </div>
+ </div>
+</nav>
+<div class="container">
+<span class="big-circle"></span>
+<img src="img/shape.png" class="square" alt="" />
+<div class="form">
+ <div class="contact-info">
+  <div onmouseover="Mover(this)" onmouseout="MoverFuera(this)"
+  style= "background-color: #ffffff; width: 300px; height: 100px;  
+  padding: 20px; font-size: 25px;">
+  Regístrate en nuestra página
+</div>
+   <p class="text">
+       Registrarte en Pelushop te permite acceder al estado e historial de su pedido, además podrás ver tus productos favoritos y poder comprarlos cuando quieras y necesites.
+       Simplemente completa los campos a continuación y tendrás tu cuenta configurada en poco minutos. Solo te pediremos la información necesaria para que el proceso de compra sea más rápido y sencillo.
+       Al registrarte, acepto la política de privacidad y los términos de uso de Pelushop.
+   </p>
+   <div class="info">
+     <div class="information">
+       <img src="img/locación.png" class="icon" alt="" />
+       <p>Maipú, Region metropolitana de Santiago, Chile</p>
+     </div>
+     <div class="information">
+       <img src="img/correo.png" class="icon" alt="" />
+       <p>PelushopTienda@gmail.com</p>
+     </div>
+     <div class="information">
+       <img src="img/tele.png" class="icon" alt="" />
+       <p>+56 9 7634 7344</p>
+     </div>
+   </div>
+
+   <div class="social-media">
+    <script>
+      function CambiaColor(a)
+  {
+      a.style.background = "red";
+  }
+      </script>
+      <p onmouseover="style.color = 'red'" onmouseout="style.color= 'black'">
+        Contacta con nosotros:
+      </p>
+     <div class="social-icons">
+       <a href="#">
+         <i class="fab fa-facebook-f"></i>
+       </a>
+       <a href="#">
+         <i class="fab fa-twitter"></i>
+       </a>
+       <a href="#">
+         <i class="fab fa-instagram"></i>
+       </a>
+       <a href="#">
+         <i class="fab fa-linkedin-in"></i>
+       </a>
+     </div>
+   </div>
+ </div>
+
+ <div class="contact-form">
+   <span class="circle one"></span>
+   <span class="circle two"></span>
+
+   <form action="index.html" autocomplete="off">
+     <h3 class="title">Registro</h3>
+     <div class="input-container">
+      <label for="nom">Usuario</label>
+       <input type="text" name="nom" id="nom" class="input" placeholder="" required 
+       onchange="CambiarMayusculas()">
+       <span>Nombre</span>
+     </div>
+     <div class="input-container">
+       <input type="email" name="email" class="input" placeholder="" required>
+       <label for="">Correo</label>
+       <span>Correo</span>
+     </div>
+     <div class="input-container">
+       <input type="tel" name="phone" class="input" placeholder="" required>
+       <label for="">Teléfono</label>
+       <span>Teléfono</span>
+     </div>
+     <div class="input-container">
+        <input type="direccion" name="direccion" class="input" placeholder="" required>
+        <label for="">Dirección</label>
+        <span>Dirección</span>
+      </div>
+      <div class="input-container">
+        <input type="rut" name="rut" class="input" placeholder="" required>
+        <label for="">RUT</label>
+        <span>RUT</span>
+      </div>
+      <div class="input-container">
+        <input type="password" name="password" class="input" placeholder="" required onfocus="CambiaColor(this)">
+        <label for="">Password</label>
+        <span>Password</span>
+      </div>
+      
+     <input type="submit" value="Envíar" class="btn" />
+   </form>
+ </div>
+</div>
+</div>
+<div class="fecha">
+  <input type="button" class="btn btn-primary" onclick="MostrarFecha()" value="Fecha">
+        <p id="demo"></p>
+</div>
+<!-- FOOTER -->
+<footer class="pie-pagina">
+ <div class="grupo-1">
+   <!-- LOGO -->
+   <div class="box">
+     <figure>
+       <a href="index.html">
+         <img src="img/logo.png" alt="Logo Pelushop">
+       </a>
+     </figure>
+   </div>
+   <!-- SOBRE NOSOTROS (FOOTER) -->
+   <div class="box">
+     <h2>SOBRE NOSOTROS</h2>
+     <p>Nuestro equipo se asegura de entregar el mejor servicio, tan cercano a la perfección como nos sea posible.
+       Tenemos los mejores productos de afamadas marcas a nivel mundial. Tenemos el compromiso de entregar sólo lo mejor a ti y tus mascotas.</p>
+     <p>Realizamos despachos a todo Chile con Chilexpress o Starken. Y contamos con despacho propio a comunas seleccionadas.</p>
+   </div>
+   <!-- REDES SOCIALES -->
+   <div class="box">
+     <h2>SIGUENOS</h2>
+     <div class="red-social">
+       <a href="https://www.facebook.com/laikamascotaschile/" class="fa fa-facebook"></a>
+       <a href="https://www.instagram.com/mascotas_online/" class="fa fa-instagram"></a>
+       <a href="https://twitter.com/solomascotas3" class="fa fa-twitter"></a>
+       <a href="https://www.google.cl/maps/place/Duoc/@-33.5105821,-70.7594494,17z/data=!3m1!4b1!4m5!3m4!1s0x9662dd9feb5cec6d:0x8be082d05dc53ccd!8m2!3d-33.5105866!4d-70.7572607" class="fa fa-map"></a>
+     </div>
+   </div>
+ </div>
+ <!-- DERECHOS -->
+ <div class="grupo-2">
+   <small>&copy; 2022 <b>Alison Urrea - Pelushop</b> - Todos los derechos reservados</small>
+ </div>
+</footer>
+<script src="js/java.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="icon" href="img/logo_1.ico">
-    <!-- ICONOS FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/9dafbdc8fb.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!-- NAVBAR -->
+        <!-- LIBRERIA BOOSTRAP -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="icon" href="img/logo_1.ico">
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+         <!-- jQuery library -->
+         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <script>
+              function Mover(obj)
+        {
+            obj.innerHTML="Contactános";
+            obj.style.background="#7e7e7e";
+           
+        }
+
+      function MoverFuera(obj)
+        {
+            obj.innerHTML="¿Tienes dudas?";
+            obj.style.background= "##7e7e7e";
+            
+        }
+
+        function CambiaColor(a)
+        {
+            a.style.background = "red";
+        }
+
+        function CambiarMayusculas()
+{
+  var a = document.getElementById('nom');
+  a.value = a.value.toUpperCase();
+  }
+  function MostrarFecha() 
+        {   document.getElementById('demo').innerHTML = Date();
+         
+        }
+    </script>
+    
+  </head>
+  <body>
+      <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">PELUSHOP</a>
@@ -35,42 +73,117 @@
               <li class="nav-item">
                 <a class="nav-link" href="contacto.html">Contacto</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="registro.html">Registro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="api.html">API</a>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
-      <!-- CONTACTO -->
-      <div class="container-form">
-          <div class="info-form">
-              <h2>Contáctanos</h2>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit voluptatum dolores quos dolorem provident illo ratione vero tempora sint eos odio, at corporis maxime reprehenderit aut praesentium aliquam perferendis numquam.</p>
-              <a href="#"> <i class="fa fa-phone">
-              </i>+56 9 7356 8744</a>
-              <a href="#"> <i class="fa fa-envelope">   
-              </i>Pelushoptienda@gmail.com</a>
-              <a href="#"> <i class="fa fa-map-marked">
-              </i>Maipú, Región Metropolitana. Santiago, Chile.</a>
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <div onmouseover="Mover(this)" onmouseout="MoverFuera(this)"
+                style= "background-color: #ffffff; width: 300px; height: 100px;  
+                padding: 30px; font-size: 25px;">
+                Pongámonos en contacto
+            </div>
+          <p class="text">
+            Ante cualquier duda, consulta o inquietud, no dudes en consultar con nosotros.
+            Nuestro servicio al cliente está disponible las 24 horas del día de Lunes a Viernes.
+            Sábado y Domingo de 10:00 am hasta las 15:00 pm.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="img/locación.png" class="icon" alt="" />
+              <p>Maipú, Region metropolitana de Santiago, Chile</p>
+            </div>
+            <div class="information">
+              <img src="img/correo.png" class="icon" alt="" />
+              <p>PelushopTienda@gmail.com</p>
+            </div>
+            <div class="information">
+              <img src="img/tele.png" class="icon" alt="" />
+              <p>+56 9 7634 7344</p>
+            </div>
           </div>
-          <form action="#" autocomplete="off">
-              <input type="text" name="nombre"
-              placeholder="Ingresa tu nombre"
-              class="campo">
-              <input type="email" name="emanil"
-              placeholder="Ingresa tu correo electrónico"
-              class="campo">
-              <textarea name="mensaje" placeholder="Ingresa tu mensaje"></textarea>
-              <input type="submit" name="enviar"
-              value="Envíar mensaje" class="btn-enviar">
+
+          <div class="social-media">
+            <script>
+            function CambiaColor(a)
+        {
+            a.style.background = "red";
+        }
+            </script>
+            <p onmouseover="style.color = 'red'" onmouseout="style.color= 'black'">
+              Contacta con nosotros:
+            </p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="index.html" autocomplete="off">
+            <h3 class="title">Contáctanos</h3>
+            <div class="input-container">
+              <label for="nom">Nombre</label>
+              <input type="text" name="nom" id="nom" class="input" placeholder="" required
+              onchange="CambiarMayusculas()">
+              <span>Nombre</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" placeholder="" required onfocus="CambiaColor(this)">
+              <label for="">Correo</label>
+              <span>Correo</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" placeholder="" required>
+              <label for="">Teléfono</label>
+              <span>Teléfono</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input" placeholder="" required></textarea></textarea>
+              <label for="">Mensaje</label>
+              <span>Mensaje</span>
+            </div>
+            <input type="submit" value="Envíar" class="btn" />
           </form>
+        </div>
       </div>
-      <br>
-      <!-- FOOTER -->
-      <footer class="pie-pagina">
+    </div>
+    <div class="fecha">
+      <input type="button" class="btn btn-primary" onclick="MostrarFecha()" value="Fecha">
+            <p id="demo"></p>
+    </div>
+    <!-- FOOTER -->
+    <footer class="pie-pagina">
         <div class="grupo-1">
           <!-- LOGO -->
           <div class="box">
             <figure>
-              <a href="#">
+              <a href="index.html">
                 <img src="img/logo.png" alt="Logo Pelushop">
               </a>
             </figure>
@@ -98,7 +211,7 @@
           <small>&copy; 2022 <b>Alison Urrea - Pelushop</b> - Todos los derechos reservados</small>
         </div>
       </footer>
+    <script src="js/java.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
-</body>
+  </body>
 </html>
