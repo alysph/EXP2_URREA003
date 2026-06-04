@@ -4,13 +4,7 @@ Sitio web de una tienda de ropa y accesorios para mascotas, desarrollado como pr
 
 ## Demo en vivo
 
-> _Agrega aquí el link de GitHub Pages una vez que lo actives_
-
----
-
-## Capturas
-
-> _Agrega aquí capturas de pantalla del sitio_
+https://alysph.github.io/pelushop/
 
 ---
 
